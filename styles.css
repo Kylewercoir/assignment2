@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+html {
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	color:firebrick;
+	font-size: large;
+	text-decoration: un;
+	background-image: url("images/darkknight.jpg");
+    background-image: url("images/joker.jpg");
+}
+head {
+	background-color: whitesmoke;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+	font-size: large;
+	align-items: center;
+	
+}
+
+body {
+	font-size: smaller;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+	margin-left: 10%;
+    min-height: 100vh  ;
+	image-orientation: var(100vh);
+	background-blend-mode: darken;
+	color: aliceblue;
+}
+.wrapper {
+ margin-left: auto;
+ margin-right: auto;
+ max-width:  100px; 
+ padding-top: 10px;
+ padding-right: 20px;
+ padding-bottom: 10px;
+ background-color: black;
+ background-position: top;
+ text-align : top; 
+ text-decoration: underline;
+ text-decoration-color: aliceblue;
+ color: whitesmoke;
+
+}
+image {
+width: 1000px;
+height: 1000px;
+line-height: 200px;
+background-color: black;
+}
+
