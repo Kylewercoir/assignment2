@@ -18,7 +18,7 @@ class Database {
     }
 
     public function insertOrder($name, $email, $phone, $size, $toppings, $qty, $instructions):  {
-        $sql = "INSERT INTO orders (customer_name, email, phone, pizza_size, toppings, quantity, instructions)
+        $pdo = "INSERT INTO orders (customer_name, email, phone, pizza_size, toppings, quantity, instructions)
                 VALUES (:name, :email, :phone, :size, :toppings, :qty, :instructions)";
         $stmt = $this->conn->prepare(query: $sql);
         $stmt->execute(params: [
