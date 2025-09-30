@@ -9,4 +9,3 @@ CREATE TABLE orders (
     notes TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-b
