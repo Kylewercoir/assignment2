@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $error = $e->getMessage();
     }
 }
+//  div class to alert you your order was placed 
 ?>
 <div class="container mt-4">
     <?php if($success): ?>

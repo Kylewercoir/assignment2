@@ -1,4 +1,4 @@
-/* Reset some basics */
+
 body, h1, h2, h3, p, ul, li, form {
   margin: 0;
   padding: 0;
@@ -37,7 +37,7 @@ form label {
   font-weight: bold;
 }
 
-/* Inputs and selects */
+
 form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
@@ -51,7 +51,7 @@ form textarea {
   font-size: 16px;
 }
 
-/* Textarea */
+
 form textarea {
   resize: vertical;
   min-height: 80px;

@@ -9,3 +9,7 @@ CREATE TABLE orders (
     notes TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+<<<<<<< HEAD
+=======
+b
+>>>>>>> f14e9b2f83a272fc5a7af8c36cdb4ad4a2a71911
