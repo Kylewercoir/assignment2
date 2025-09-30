@@ -7,28 +7,19 @@ class Database {
     private $password = "jVwfoehVCC"; 
     public $conn;
 
-    public function __construct() {
-        try {
-            
-            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            die("DB Connection failed: " . $e->getMessage());
-              }
-    }
-
-    public function insertOrder($name, $email, $phone, $size, $toppings, $qty, $instructions):  {
-        $pdo = "INSERT INTO orders (customer_name, email, phone, pizza_size, toppings, quantity, instructions)
-                VALUES (:name, :email, :phone, :size, :toppings, :qty, :instructions)";
-        $stmt = $this->conn->prepare(query: $sql);
-        $stmt->execute(params: [
-            ":name" => $name,
-            ":email" => $email,
-            ":phone" => $phone,
-            ":size" => $size,
-            ":toppings" => $toppings,
-            ":qty" => $qty,
-            ":instructions" => $instructions
-        ]);
+    public function getConnection() {
+        if ($this->conn === null) {
+            try {
+                $this->conn = new PDO(
+                    "mysql:host={$this->host};dbname={$this->db_name}",
+                    $this->username,
+                    $this->password
+                );
+                $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (PDOException $e) {
+                echo "Connection failed: " . $e->getMessage();
+            }
+        }
+        return $this->conn;
     }
 }

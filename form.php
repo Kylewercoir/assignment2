@@ -1,6 +1,7 @@
 <?php
+
 include "inc/header.php";
-require "inc/config.php";
+require "config.php";
 require "inc/db.php";
 require "order.php";
 
@@ -13,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $db = new Database();
         $pdo = $db->getConnection();
 
-        $order = new Order($pdo);
+        $order = new Order ($pdo);
 
         $success = $order->saveOrder($_POST);
 
@@ -28,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <div class="container mt-4">
     <?php if($success): ?>
         <div class="alert alert-success">
-            <p>Your pizza order has been placed! 🍕</p>
+            <p>Your pizza order was placed</p>
         </div>
     <?php endif; ?> 
 
@@ -38,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
     <?php endif; ?>
 
-    <form method="post" class="mb-4">
+    <form method="post" class="mb-3">
 
         <div class="mb-3">
             <label class="form-label">Name</label>
@@ -65,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </select>
         </div>
 
-        <div class="mb-3">
+        <div class="container">
             <label class="form-label">Toppings</label><br>
             <input type="checkbox" name="toppings[]" value="Pepperoni"> Pepperoni
             <input type="checkbox" name="toppings[]" value="Mushrooms"> Mushrooms
@@ -93,4 +94,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </form>   
 </div>
 
-<?php include "inc/footer.php"; ?>
+<?php include "inc/footer.php";

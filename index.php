@@ -1,22 +1,10 @@
-<?php 
-include "inc/header.php"; 
-?>
-// form to process the contact info 
-<form action="process.php" method="POST">
-    <fieldset>
-        <legend>Customer info</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+<?php include "inc/header.php";
+include_once "order.php"; ?>
+ <link rel="stylesheet" href="css/style.css">
+<div class="text-center mt-5">
+  <h1>Welcome to Kyles Pizza Place</h1>
+  <p>Click below to order your pizza </p>
+  <a href="form.php" class="btn btn-lg btn-primary">Order Pizza</a>
+</div>
 
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" required>
-
-        <label for="phone">Phone Number</label>
-        <input type="text" id="phone" name="phone">
-
-    </fieldset>
-
-
-
-
-</form>
+<?php include "inc/footer.php"; ?>
