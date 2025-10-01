@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $success = $order->saveOrder($_POST);
 
         if (!$success) {
-            $error = "There was an issue saving your order.";
+            $error = "There was an issue saving your order please try again.";
         }
     } catch (Exception $e) {
         $error = $e->getMessage();
@@ -48,17 +48,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Email</label>
+            <label class="label">Email</label>
             <input type="email" name="email" class="form-control" required>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Phone</label>
+            <label class="label">Phone</label>
             <input type="tel" name="phone" class="form-control" required>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Pizza Size</label>
+            <label class="label">Pizza Size</label>
             <select name="pizza_size" class="form-select" required>
                 <option value="">-- Choose Size --</option>
                 <option value="Small">Small</option>
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
 
         <div class="container">
-            <label class="form-label">Toppings</label><br>
+            <label class="label">Toppings</label><br>
             <input type="checkbox" name="toppings[]" value="Pepperoni"> Pepperoni
             <input type="checkbox" name="toppings[]" value="Mushrooms"> Mushrooms
             <input type="checkbox" name="toppings[]" value="Onions"> Onions
@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         </div>
 
-        <div class="mb-3">
+        <div class="mb-4">
             <label class="form-label">Notes</label>
             <textarea name="notes" class="form-control"></textarea>
         </div>
